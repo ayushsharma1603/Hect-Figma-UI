@@ -114,10 +114,6 @@ line-height: 24px;
     
 }
 
-.mobileButton {
-  display: none;
-}
-
 .navBtns{
     display: flex;
     align-items: center;
@@ -161,9 +157,6 @@ line-height: 24px;
 
 
 
-.navBtns2{
-    display: none;
-}
 
 
 .wrapper{
@@ -225,6 +218,12 @@ color: white;
   flex-direction: column;
   gap: 30px;
 }
+
+.mobileMenu.open {
+  right: 0;
+  transform: none;
+}
+
 .mobileMenu > .anchor > a{
   font-size: 20px;
 }
@@ -299,20 +298,19 @@ overflow: hidden;
     
 }
 
-@media (min-width:1024px) {
+@media (min-width:1023px) {
     .navDiv{
         padding: 20px 80px;
     }
     .overlayBg{
         display: none;
     }
-}
-/* ---------------- Mobile Styles ---------------- */
-@media (min-width:1024px) {
-  .mobileMenu{
+    .mobileMenu{
     transform: translateX(80vw) !important;
   }
 }
+/* ---------------- Mobile Styles ---------------- */
+
 
 @media (max-width: 1024px) {
     

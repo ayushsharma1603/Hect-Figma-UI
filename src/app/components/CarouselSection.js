@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import styles from "./CarouselSection.module.css";
 import CustomCarousel from "./CustomCarousel";

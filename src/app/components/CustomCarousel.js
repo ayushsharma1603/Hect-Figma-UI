@@ -1,12 +1,21 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CustomCarousel.module.css";
 import Image from "next/image";
 
 const CustomCarousel = ({ slides }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
 
+  const [isClient, setIsClient] = useState(false);
+
+   // render nothing on server
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
   const handleIndicatorClick = index => {
     setCurrentSlide(index);
   };
