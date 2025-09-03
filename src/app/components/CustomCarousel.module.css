@@ -1,0 +1,181 @@
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  right: 0;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.box {
+  width:466px;
+  max-height: 364px;
+  border-radius: 16px;
+  padding: 40px;
+  background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+backdrop-filter: blur(42px);
+position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 1.2rem;
+}
+
+.text {
+  flex-grow: 1;
+  font-family: 'Helvetica Now Display';
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: 0px;
+color: #555555;
+min-height: 120px;
+
+}
+
+.profile{
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+}
+.profile img{
+  width: 100%;
+  height: auto;
+
+}
+
+.footer {
+  display: flex;
+  gap: 20px;
+}
+
+.profile +div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: 'Helvetica Now Display';
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 0.18px;
+vertical-align: middle;
+text-transform: uppercase;
+color: #333;
+}
+
+.title {
+  font-family: 'Helvetica Now Display';
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0px;
+vertical-align: middle;
+color: #555555;
+
+}
+.backGroundImg{
+  width: 116px;
+  height: auto;
+  position: absolute;
+  bottom: 27px;
+  right: 10px;
+  z-index: 0;
+
+}
+.backGroundImg img{
+  width: 100%;
+  height: auto;
+
+}
+
+.indicators {
+  text-align: center;
+  display: flex;
+  gap: 14px;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+.indicator {
+  width: 16px;
+height: 16px;
+
+  background: #D9D9D9;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background: #27697B;
+}
+
+@media (max-width: 1724px){
+.box{
+  padding: 20px;
+  gap: 20px;
+  width: 350px;
+}
+.text{
+  min-height: 100px;
+  font-size: 16px;
+}
+.backGroundImg{
+  width: 100px;
+  bottom: 20px;
+}
+
+}
+@media (max-width: 1111px){
+  .slide{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Responsive: 1 box per row on small screens */
+@media (max-width: 991px) {
+  
+  .carouselWrapper{
+    position: static;
+  }
+  .slide {
+    gap: 20px;
+  }
+  .text{
+font-size: 14px;
+  }
+
+    .text {
+        min-height: 79px;
+    
+}
+}
+
+@media (max-width:375px) {
+  .box{
+    width: auto;
+  }
+}

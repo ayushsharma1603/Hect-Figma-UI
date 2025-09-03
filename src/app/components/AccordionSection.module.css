@@ -1,0 +1,213 @@
+.wrapper {
+  margin-top: 80px;
+  position: relative;
+  margin-bottom: 360px;
+  width: 100%;
+  min-height: 911px;
+  background-image: url("/bg6.jpg");
+  background-size: cover;
+  background-position: 90% 50%;
+  transform: scaleX(-1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.accordionContainer {
+  position: absolute;
+  left: 0;
+  background: linear-gradient(
+    -89.98deg,
+    rgba(0, 0, 0, 0.4) -5.43%,
+    rgba(0, 0, 0, 0) 98.98%
+  );
+  backdrop-filter: blur(15px);
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+  max-width: 1046px;
+  width: 53.5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: scaleX(-1);
+}
+.accordionContainer h1 {
+  text-align: center;
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.5px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  margin-bottom: 16px;
+}
+.accordionContainer > p {
+  color: white;
+  font-family: "Roboto";
+  font-weight: 300 !important;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.container{
+    min-height: 600px;
+}
+
+.accordionBody {
+    transition: all 0.5s ease;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  padding-top: 12px;
+  color: white !important;
+  background: transparent !important;
+  max-width: inherit;
+  width: 100%;
+  
+  border-left: none !important;
+  border-right: none !important;
+  
+  font-family: 'Roboto';
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0px;
+vertical-align: middle;
+
+}
+
+.item {
+  max-width: 767px;
+  background: transparent !important;
+  border: none ;
+  
+    border-radius: 0px !important; 
+  color: white !important;
+  border-bottom: 1px solid #cbcbcb;
+}
+.accordionBtn {
+  background: none !important;
+  
+  padding: 30px 10px;
+  max-width: 767px;
+  font-family: 'Roboto';
+font-weight: 500 !important;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+  color: white !important;
+  background: transparent !important;
+  border-left: none ;
+  border-right: none;
+  outline: none !important;
+margin: 0;
+
+
+}
+.accordionBtn:focus {
+  box-shadow: none !important;
+  outline: none;
+  border: none !important;
+}
+.accordionBtn.collapsed {
+    
+  padding-bottom: 12px;
+  background: transparent !important;
+  color: white !important;
+  background: none !important;
+  outline: none !important;
+  border: none !important;
+}/* Remove Bootstrap arrow completely */
+.accordionBtn::after {
+  content: none ;
+}
+.accordionBtn::after {
+  content: '' ;
+  display: inline-block ;
+  width: 16px;
+  height: 16px;
+  background-image: url('/VectorArrow.svg') ; /* your SVG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate when open */
+.accordionBtn:not(.collapsed)::after {
+    display: inline-block ;
+  width: 16px;
+  height: 16px;
+  background-image: url('/revArrow.svg') ;
+
+}
+
+/* Rotate when collapsed */
+.accordionBtn.collapsed::after {
+  transform: rotate(0deg);
+}
+.accordionBodyContainer {
+  max-width: 767px;
+  background: transparent !important;
+}
+
+@media (max-width:1652px) {
+    .accordionContainer{
+        position: relative;
+        /* transform: translateX(50%); */
+        width: 80%;
+    }
+}
+
+@media (max-width:1024px) {
+    .accordionContainer{
+
+        width: 100%;
+    }
+}
+
+@media (max-width: 930px) {
+    .wrapper{
+        margin-bottom: 90px;
+    }
+}
+@media (max-width:768px) {
+    .accordionContainer p{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:595px) {
+    .accordionContainer h1{
+        line-height: 110%;
+       font-size: 30px;
+    }
+    .accordionContainer p{
+        line-height: 100%;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .accordionBtn{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18px;
+    }
+    .accordionBody{
+        font-size: 14px;
+    }
+    
+.accordionBtn.collapsed {
+    padding-top: 20px;
+        padding-bottom: 20px;
+}
+}

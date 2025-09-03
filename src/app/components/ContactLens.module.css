@@ -1,0 +1,28 @@
+.container {
+  border-radius: 100px;
+  padding: 6px 24px;
+  transform: rotate(-4.52deg);
+  border: 2px solid #27697b;
+  width: fit-content;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+display: inline-block;
+  color: #27697b;
+}
+
+@media (max-width: 960px) {
+  .container {
+    font-size: 16px;
+    padding: 6px 17px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    font-size: 12px;
+  }
+}

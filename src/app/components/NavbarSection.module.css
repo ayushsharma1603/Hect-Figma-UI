@@ -1,0 +1,468 @@
+.wrapper {
+    position: relative;
+     width: 100%;
+  min-height: 989px; 
+  background-image: url("/heroBackground.svg"); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+padding-top: 40px;
+}
+.socials{
+display: flex;
+gap: 30px;
+}
+.socials div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+.navDiv {
+    color: white;
+height: 104px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-radius: 16px;
+border-width: 1px;
+
+
+border: 1px solid;
+
+background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+border: 1px solid;
+
+border-image-source: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(216, 216, 216, 0) 0%, #3C7888 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(216, 216, 216, 0) 0%, #3C7888 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+linear-gradient(114.55deg, #3C7888 2.13%, rgba(255, 255, 255, 0) 98.14%);
+
+
+backdrop-filter: blur(42px)
+
+
+}
+
+.navA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 11;
+}
+
+.anchor {
+
+  padding: 20px 14px;
+}
+
+.anchor a{
+
+      font-family: 'Roboto';
+font-weight: 300;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0px;
+
+
+  color: white;
+}
+.active a{
+font-weight: 600;
+line-height: 24px;
+
+  color: #D0E83C;
+}
+
+
+.logoContainer{
+    max-width: 200px;
+
+    height: auto;
+}
+
+.logoContainer img{
+    width: 100%;
+    height: auto;
+}
+
+/* Hamburger button (desktop hidden) */
+.toggler {
+  display: none;
+  font-size: 28px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Close button inside mobile menu */
+.closeBtn {
+    color: white;
+  display: none;
+}
+
+
+
+.showMenu{
+    /* background-color: black; */
+    transition: all 0.6s ease;
+    
+}
+
+.mobileButton {
+  display: none;
+}
+
+.navBtns{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navBtns button{
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBtns button:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.overlayBg {
+  position: fixed !important;
+  
+  
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(7px);
+  inset: 0;
+  z-index: 2000; /* just under navA */
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4); 
+  background: rgba(0, 0, 0, 0.5); /* 50% opacity */
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transition: all 0.5s ease;
+}
+
+
+
+.navBtns2{
+    display: none;
+}
+
+
+.wrapper{
+  position: relative;
+}
+
+.heroContent{
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 1330px;
+  margin: 0 auto;
+  padding-top: 120px; /* space for navDiv height */
+  z-index: 10; /* below mobile menu */
+}
+
+
+.heroContent h1{
+  font-family: 'Roboto';
+font-weight: 700;
+font-style: Bold;
+font-size: 96px;
+line-height: 130%;
+letter-spacing: -1.5px;
+text-align: center;
+vertical-align: middle;
+color: #6ABBCE;
+
+}
+.heroContent p{
+  max-width: 547px;
+  font-family: "Helvetica Now Display";
+font-weight: 400;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: 0px;
+text-align: center;
+vertical-align: middle;
+color: white;
+}
+
+.mobileMenu{
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 80vw;
+  height: 100vh;
+  background-color: gray;
+  z-index: 5001;
+  padding-left: 30px;
+  transform: translateX(80vw);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.mobileMenu > .anchor > a{
+  font-size: 20px;
+}
+
+.mobileMenu button{
+  align-self: flex-end;
+}
+
+.imgCont{
+  width: 479px;
+height: auto;
+overflow: hidden;
+}
+
+.imgCont img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.picsContainer{
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.arrow{
+  max-width: 479px;
+  height: auto;
+}
+.arrow img{
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width:1800px) {
+  .wrapper{
+    height: 80vh;
+  }
+}
+
+@media (max-width:1405px) {
+    .anchor{
+        padding: 11px 5px;
+    }
+    .heroContent{
+      width: auto;
+      padding-top: 40px;
+      text-align: center;
+    }
+    .heroContent h1{
+      font-size: 56px;
+    }
+  .picsContainer{
+    top: 70%;
+  }
+}
+
+
+@media (max-width:1200px) {
+    .anchor a{
+        font-size: 14px;
+    }
+    .logoContainer{
+        max-width: 140px;
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .navDiv{
+        padding: 20px 80px;
+    }
+    .overlayBg{
+        display: none;
+    }
+}
+/* ---------------- Mobile Styles ---------------- */
+@media (min-width:1024px) {
+  .mobileMenu{
+    transform: translateX(80vw) !important;
+  }
+}
+
+@media (max-width: 1024px) {
+    
+    .navBtns{
+        display: none;
+    }
+    .navBtns2{
+        display: flex;
+        position: relative;
+        z-index: 2000;
+    }
+    .navA{
+      display: none;
+    }
+
+  /* ✅ Only show when menu is active */
+  .showMenu {
+     transform: translateX(0); /* slide in */}
+
+  .toggler {
+    display: block;
+    /* position: relative; */
+    z-index: 1; /* above everything */
+  }
+
+  .closeBtn {
+    display: block;
+    align-self: flex-end;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 2%;
+    margin-right: 10%;
+    z-index: 2103; /* ensure above overlay */
+  }
+  
+
+  .closeBtn {
+    display: block; /* show close button on mobile */
+    align-self: flex-end;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 2%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width:960px) {
+  .heroContent h1{
+    font-size: 40px;
+  }
+  .navDiv{
+        height: 79px;
+    }
+  .picsContainer{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .socials div{
+    align-items: center;
+  }
+  .heroContent{
+    gap: 20px;
+    width: 80%;
+  }
+  .arrow{
+    width: 300px;
+  }
+  .picsContainer{
+    top: 65%;
+  }
+  .wrapper{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .navDiv{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5000;
+
+  }
+  .picsContainer{
+    position: static;
+    transform: none;
+  }
+  .heroContent{
+    position: static;
+    transform: none;
+  }
+
+}
+
+@media (max-width:769px) {
+  .picsContainer{
+    top: 60%;
+  }.heroContent{
+    top: 20%;
+  }
+}
+
+@media (max-width:560px) {
+    
+.logoContainer{
+    max-width: 116px;
+}
+.heroContent h1{
+  font-size: 30px;
+}
+.heroContent p{
+  font-size: 14px;
+}
+.picsContainer{
+  top: 60%;
+}
+.arrow{
+  width: 200px;
+}
+.heroContent{
+  top: 16%;
+}
+.wrapper{
+  min-height: 614px;
+}
+.wrapper{
+  
+  overflow: hidden;
+}
+.wrapper{
+  justify-content: center;
+}
+.navDiv{
+  position: static;
+  transform: none;
+}
+.mobileMenu{
+  gap: 20px;
+}
+.mobileMenu > .anchor >a{
+font-size: 16px;
+}
+}

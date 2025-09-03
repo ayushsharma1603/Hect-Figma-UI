@@ -1,0 +1,283 @@
+.wrapper{
+    padding-bottom: 80px;
+    background-image: url("/bg7.svg"); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 1271px;
+  padding-top: 0;
+  display: flex;
+  align-items: flex-end;
+  /* position: relative; */
+}
+
+.content{
+  width: 100%;
+  min-height: 894px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  margin-top: 57px;
+  
+}
+.bgImgContainer{
+  width: 705px;
+  height: 894px;
+  border-radius: 32px;
+  position: relative;
+  
+}
+.overlay{
+position: absolute;
+top: -3.5%;
+left: -4%;
+width: 380px;
+height: 380px;
+background: #6ABBCE;
+border-radius: 32px;
+z-index: 1;
+}
+.bgImgContainer img{
+  
+  
+  border-radius: 32px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.textContent{
+  display: flex;
+  flex-direction: column;
+  max-width: 770px;
+  margin-top: 57px;
+  gap: 24px;
+  justify-self: flex-end;
+}
+.textContent h1{
+  max-width: 668px;
+  font-family: 'Roboto';
+font-weight: 700;
+font-size: 48px;
+line-height: 130%;
+letter-spacing: 0px;
+vertical-align: middle;
+color: #262626;
+}
+
+.textContent p{
+  color: #555;
+  font-family: 'Roboto';
+font-weight: 400;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0px;
+vertical-align: middle;
+
+}
+.textContent h3{
+  font-family: 'Roboto';
+font-weight: 800;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 0px;
+vertical-align: middle;
+text-transform: uppercase;
+color: #27697B;
+}
+.svgContent{
+  height: 80px;
+  width: 80px;
+  background: #27697B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards{
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  border-radius: 32px;
+  backdrop-filter: blur(20px);
+
+box-shadow: 0px 0px 60px 0px #27697B1A;
+position: absolute;
+z-index: 3;
+right: 0;
+bottom: 57px;
+
+}
+.cards > div{
+max-width: 286px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0;
+  justify-content: space-between;
+}
+.cards > div button{
+  max-width: 132px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cards > div h3{
+  color: #333;
+font-weight: 700;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+}
+.cards >div p{
+font-weight: 400;
+font-size: 18px;
+line-height: 140%;
+letter-spacing: 0px;
+color: #555;
+
+  min-height: 100px;
+}
+
+@media (max-width:1500px) {
+  .textContent{
+    max-width: 600px;
+  }
+  .cards{
+    bottom: 20px;
+  }
+  .overlay{
+    width: 200px;
+    height: 200px
+  }
+}
+
+@media (max-width:1320px) {
+  
+  .overlay{
+    top: -2%;
+    width: 200px;
+    height: 200px
+  }
+}
+
+@media (max-width:1025px) {
+  .cards{
+    position: static;
+  }
+  .content{
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  .bgImgContainer{
+    width: 50%;
+    height: 70%;
+  }
+}
+
+@media (max-width:960px) {
+  .textContent h1{
+    font-size: 30px;
+  }
+  .textContent h3{
+    font-size: 16px;
+  }
+   .textContent p{
+    font-size: 14px;
+   }
+   .cards > div h3 {
+    font-size: 18px;
+   }
+   .cards{
+    
+    padding: 30px 20px;
+   }
+   .cards > div{
+    min-width: 150px;
+    gap: 10px;
+   }
+   .cards >div p{
+    font-size: 14px;
+   }
+   .cards >div button{
+    width: 100%;
+   }
+}
+
+@media (max-width:810px) {
+  .cards{
+    flex-wrap: wrap;
+  }
+  .cards > div p{
+    min-height: 0px;
+    max-width: 80%;
+    text-align: center;
+  }
+  .textContent{
+    margin-top: 0;
+  }
+  .cards > div{
+    align-items: center;
+  }
+}
+
+@media (max-width:780px) {
+  .cards{
+    flex-direction: column;
+  }.textContent{
+    max-width: 80%;
+  }
+}
+
+@media (max-width:426px) {
+  .overlay{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+  }
+  .bgImgContainer img{
+    border-radius: 20px;
+  }
+  .textContent{
+    gap: 20px;
+    text-align: center;
+  }
+  .textContent h1{
+    font-size: 26px;
+    
+  }
+  .textContent p{
+    font-size: 12px;
+  }
+  .svgContent{
+    height: 40px;
+    width: 40px;
+  }
+  .svgContent svg{
+    width: 60%;
+    height: auto;
+  }
+  .cards > div h3{
+    font-size: 16px;
+  }
+  .cards > div p{
+    font-size: 12px;
+  }
+    .cards >div button{
+      gap: 7px;
+      justify-content: center;
+    }
+  .cards >div button span{
+    font-size: 14px;
+  }
+}
